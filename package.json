@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate",
+  "name": "react-weather",
   "version": "1.0.0",
-  "description": "Simple React Boilerplate",
+  "description": "Simple React Weather App",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
@@ -10,9 +10,11 @@
   "author": "Matt Black",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.16.2",
     "express": "^4.15.3",
     "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.5.1",
