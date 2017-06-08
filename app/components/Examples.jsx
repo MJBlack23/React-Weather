@@ -15,7 +15,7 @@ const Examples = React.createClass({
             <Link to='/?location=los%20angeles'>Los Angeles, CA</Link>
           </li>
           <li>
-            <Link to='/?location=new&20york'>New York, NY</Link>
+            <Link to='/?location=new%20york'>New York, NY</Link>
           </li>
         </ol>
       </div>
