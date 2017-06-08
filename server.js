@@ -5,10 +5,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use((req, res, next) => {
-  if (req.headers['x-forwarded-proto'] ==='http') {
-    res.redirect('http://' + req.hostname + req.url);
-  } else {
+  if (Object.keys(req.headers).indexOf('x-forward-proto') > 0 && req.headers['x-forwarded-proto'] ==='http') {
     next();
+  } else {
+    res.redirect('http://' + req.hostname + req.url);
   }
 });
 
