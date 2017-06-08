@@ -6,11 +6,14 @@ const port = process.env.PORT || 3000;
 
 app.use((req, res, next) => {
   if (Object.keys(req.headers).indexOf('x-forward-proto') > 0) {
-    if (req.headers['x-forwarded-proto'] === 'https') {
+    if (req.headers['x-forwarded-proto'] === 'http') {
+      next();
+    } else {
       res.redirect('http://' + req.hostname + req.url);
     }
+  } else {
+    next();
   }
-   next();
 });
 
 app.use(express.static('public'));
